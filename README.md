@@ -29,6 +29,8 @@ I carried out several experiments to reproduce and analyze the behavior of the o
 - **Examined the effect of modifying the optimal hyperparameters (OC and SD)** as presented in Table 4, and evaluated how these changes impact final performance.
 - **Evaluated model performance under different batch sizes** to analyze robustness to training configuration changes.
 
+All experiment outputs, including logs, metrics, and per-setting results, are stored in the expt_logs directory.
+
 ---
 
 ## Getting Started (Installation)
@@ -40,7 +42,7 @@ conda create -n CaRot python=3.10
 conda activate CaRot
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
-mkdir checkpoints
+mkdir checkpoints # The checkpoints directory is used to store model weights generated during fine-tuning
 
 ```
 
@@ -56,12 +58,17 @@ export PYTHONPATH="$PYTHONPATH:$PWD"
 * Refer to the DATA.md for the ImageNet directory strucutre.
 
 ```bash
+# Create required dataset folders
+mkdir -p datasets/data
+mkdir -p datasets/csv
+
 ln -s /your_dataset_location/imagenet ./datasets/data/ILSVRC2012
 ln -s /your_dataset_location/imagenet_R ./datasets/data/imagenet-r
 ln -s /your_dataset_location/imagenet_A ./datasets/data/imagenet-a
 ln -s /your_dataset_location/imagenet_S ./datasets/data/sketch
 ln -s /your_dataset_location/objectnet-1.0 ./datasets/data/objectnet-1.0
 
+# Create ImageNet CSV for fine-tuning
 python datacreation_scripts/imagenet_csv_creator.py
 
 OC=0.2 # The optimal hyperparameter value for the orthogonality constraint
