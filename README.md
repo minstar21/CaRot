@@ -30,6 +30,12 @@ I carried out several experiments to reproduce and analyze the behavior of the o
 - **Evaluated model performance under different batch sizes** to analyze robustness to training configuration changes.
 
 All experiment outputs, including logs, metrics, and per-setting results, are stored in the expt_logs directory.
+<br/>
+
+**Summary of Findings**
+- The SD coefficient produced the most significant performance differences, showing the highest sensitivity among the tested hyperparameters.
+- The reproduced results were highly consistent with the original paper, with only a 0.003% deviation from the reported performance.
+- Due to the inherent behavior of CLIP-based models, the proposed method showed performance degradation at smaller batch sizes, consistent with trends commonly observed in contrastive vision–language training.
 
 ---
 
