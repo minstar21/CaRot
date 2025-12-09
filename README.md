@@ -33,8 +33,8 @@ All experiment outputs, including logs, metrics, and per-setting results, are st
 <br/>
 
 **Summary of Findings**
-- The SD coefficient produced the most significant performance differences, showing the highest sensitivity among the tested hyperparameters.
-- The reproduced results were highly consistent with the original paper, with only a 0.003% deviation from the reported performance.
+- The reproduced results were highly consistent with the original paper, showing only about a 0.5% difference in accuracy and a 0.016 difference in ECE compared to the reported performance.
+- While OC and SD showed generally similar variation patterns, the SD coefficient produced the most noticeable differences, closely matching the trends reported in Table 4 of the original paper.
 - Due to the inherent behavior of CLIP-based models, the proposed method showed performance degradation at smaller batch sizes, consistent with trends commonly observed in contrastive vision–language training.
 
 ---
