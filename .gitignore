@@ -1,6 +1,4 @@
 checkpoints/
-datasets/
-expt_logs/
 wandb/
 objectnet-1.0/
 __pycache__/
