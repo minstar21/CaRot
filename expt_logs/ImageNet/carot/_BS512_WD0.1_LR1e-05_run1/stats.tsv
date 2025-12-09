@@ -1,0 +1,2 @@
+	epoch	ImageNet Accuracy	ImageNet ECE	ImageNetV2 Accuracy	ImageNetV2 ECE	ImageNetR Accuracy	ImageNetR ECE	ImageNetA Accuracy	ImageNetA ECE	ImageNetSketch Accuracy	ImageNetSketch ECE	ObjectNet Accuracy	ObjectNet ECE	Avg ID carot Loss
+0	9	0.826	0.064	0.7342	0.0591	0.7762	0.0776	0.5024	0.1272	0.523	0.0965	0.562	0.117	1.9506
